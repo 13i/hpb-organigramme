@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -102,3 +103,10 @@ dist
 
 # TernJS port file
 .tern-port
+=======
+profiles.json
+dist/*
+node_modules/*
+organigramme/*
+hpb/*
+>>>>>>> e5f2d6a (Initial commit)
