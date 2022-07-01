@@ -1,0 +1,43 @@
+mixin brand(x, y, logo, photo, name, poste, alias)
+  - logo = `https://www.groupehpb.com/organigramme/img/${logo}`
+  - photo = `https://www.groupehpb.com/organigramme/img/${photo}`
+  svg(x=x y=y width="150" height="180" viewBox="0 0 150 180" class="brand")
+    g(class="card" data-alias=alias)
+      use(href="#brand-bg")
+      image(xlink:href=logo x="30" y="60" height="90" width="90")
+      svg(x="-75" y="180" width="300" height="230" viewBox="0 0 300 230" class="popin")
+        rect(class="panel" y="30" width="300" height="200")
+        line(x="-75" y="180" class="barre" x1="150" x2="150" y1="0" y2="30")
+        svg(x="115" y="50" height="70" width="70" viewBox="0 0 70 70" preserveAspectRatio="xMidYMid meet")
+          image(xlink:href=photo height="70" width="70" clip-path="url(#round-pic)")
+        svg(x="0" y="145" width="300" height="30" viewBox="0 0 300 30")
+          text(text-anchor="middle" x="50%" y="12")
+            tspan(class="name")= name
+          text(text-anchor="middle" x="50%" y="28")
+            tspan(font-size="12" font-weight="300" class="function")= poste
+        svg(x="90" y="185" width="120" height="30" viewBox="0 0 120 30" class="link" data-alias=alias)
+          text(text-anchor="middle" x="50%" y="16")
+            tspan VOIR LA BIO
+      svg(x="63" y="165" width="24" height="24" viewBox="0 0 24.2 24.2")
+        a(xlink:href="#" class="plus")
+          use(href="#plus")
+
+mixin bossCard(x, barreX1, barreX2, plusX, photo, name, poste, alias)
+  - photo = `https://www.groupehpb.com/organigramme/img/${photo}`
+  g.card(data-alias=alias)
+    svg.popin(x=x y='55' width='330' height='200' viewbox='0 0 330 200')
+      rect.panel(width='300' height='200')
+      line.barre(x1=barreX1 x2=barreX2 y1='100' y2='100')
+      svg(x='115' y='20' height='70' width='70' viewbox='0 0 70 70' preserveaspectratio='xMidYMid meet')
+        image(xlink:href=photo height='70' width='70' clip-path='url(#round-pic)')
+      svg(x='0' y='115' width='300' height='30' viewbox='0 0 300 30')
+        text(text-anchor='middle' x='50%' y='12')
+          tspan.name= name
+        text(text-anchor='middle' x='50%' y='28')
+          tspan.function(font-size='12' font-weight='300')= poste
+      svg.link(x='90' y='155' width='120' height='30' viewbox='0 0 120 30')
+        text(text-anchor='middle' x='50%' y='16')
+          tspan VOIR LA BIO
+    svg(x=plusX y='144' width='24' height='24' viewbox='0 0 24.2 24.2')
+      a.plus(xlink:href='#')
+        use(href='#plus')

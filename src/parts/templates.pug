@@ -1,0 +1,23 @@
+
+template#template-brand
+  svg(x="${x}" y="${y}" width="150" height="180" viewBox="0 0 150 180" class="brand")
+    g(class="card" data-alias=`${alias}`)
+      use(href="#brand-bg")
+      image(xlink:href="${logo}" x="30" y="60" height="90" width="90")
+      svg(x="-75" y="180" width="300" height="230" viewBox="0 0 300 230" class="popin")
+        rect(class="panel" y="30" width="300" height="200")
+        line(x="-75" y="180" class="barre" x1="150" x2="150" y1="0" y2="30")
+        svg(x="115" y="50" height="70" width="70" viewBox="0 0 70 70" preserveAspectRatio="xMidYMid meet")
+          image(xlink:href="${photo}" height="70" width="70" clip-path="url(#round-pic)")
+        svg(x="0" y="145" width="300" height="30" viewBox="0 0 300 30")
+          text(text-anchor="middle" x="50%" y="12")
+            tspan(class="name") ${name}
+          text(text-anchor="middle" x="50%" y="28")
+            tspan(font-size="12" font-weight="300" class="function") ${poste}
+        svg(x="90" y="185" width="120" height="30" viewBox="0 0 120 30" class="link" data-alias=`${alias}`)
+          text(text-anchor="middle" x="50%" y="16")
+            tspan ${btnLabel}
+      svg(x="63" y="165" width="24" height="24" viewBox="0 0 24.2 24.2")
+        a(xlink:href="#" class="plus")
+          use(href="#plus")
+  

@@ -1,0 +1,19 @@
+doctype html
+html(lang="fr")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, user-scalable=no")
+
+    title Organigramme Groupe HPB 
+
+    link(href="https://fonts.googleapis.com" rel="preconnect")
+    link(href="https://fonts.gstatic.com" rel="preconnect" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" type="text/css")
+
+    link(href="assets/css/layout.css" rel="stylesheet" type="text/css") 
+  body 
+    #container
+      include parts/svg
+    script 
+      | window['ORGANIGRAMME_JSON_URL'] = 'https://www.groupehpb.com/wp-content/themes/hpb/organigramme_v2/profiles.json';
+    script(src="assets/js/layout.js") 

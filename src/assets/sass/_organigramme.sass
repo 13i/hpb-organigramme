@@ -1,0 +1,65 @@
+
+#svg-orga 
+    background: #222 url('../img/bg.png') center top/contain no-repeat
+
+    .group 
+        fill: #fff
+        stroke: #38373f
+        stroke-width: 4px
+
+    .barre
+        stroke: #fff
+        stroke-width: 2px
+
+    .panel
+        fill: #38373f
+        stroke: #fff
+        stroke-width: 2px
+
+    .brand
+        overflow: visible
+
+    .plus
+        pointer-events: fill
+        transform-origin: 50% 50%
+
+    .plus:hover,
+    .on .plus
+        animation-name: plus
+        animation-duration: 0.25s
+        transform: rotate(45deg)
+
+    .popin
+        display: none
+        overflow: visible
+
+    .on .popin
+        display: initial
+
+    .name 
+        font-family: Montserrat-Medium, Montserrat
+        font-size: 14px
+        font-weight: 500
+        fill: #fff
+
+    .function 
+        font-family: Montserrat-Medium, Montserrat
+        fill: #fff
+        font-size: 12px
+
+    .link 
+        pointer-events: fill
+        cursor: pointer
+
+    .link tspan 
+        font-family: Montserrat-Medium, Montserrat
+        font-weight: 500
+        fill: #df6436
+        font-size: 14px
+
+@keyframes plus
+    0% 
+        transform: rotate(0deg)
+
+    100% 
+        transform: rotate(45deg)

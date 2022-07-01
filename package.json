@@ -1,0 +1,24 @@
+{
+  "name": "hpb-organigramme",
+  "version": "1.0.0",
+  "description": "Organigramme du Groupe HPB",
+  "main": "dist/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Pierre Aboucaya <pierre@13i.fr>",
+  "license": "ISC",
+  "dependencies": {
+    "typesafe-templates": "^1.3.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/13i/hpb-organigramme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/13i/hpb-organigramme/issues"
+  },
+  "homepage": "https://github.com/13i/hpb-organigramme#readme"
+}
